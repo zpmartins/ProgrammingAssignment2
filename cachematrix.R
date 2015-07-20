@@ -1,6 +1,5 @@
 ## Put comments here that give an overall description of what your
 ## functions do
-library(RUnit)
 
 ## This function create a object supported by a R list data structure, that will be used to store a matrix and its inverse.
 makeCacheMatrix <- function(baseMatrix = matrix()) {
@@ -28,7 +27,9 @@ makeCacheMatrix <- function(baseMatrix = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function returs the inverted matrix for the matrix stored on the cacheMatrix. 
+## If the inverted matrix was already calculated, the previous calculated value will be returned. 
+## Otherwise it will calc the inverted matrix, stored in the cacheMatrix and return the inverted matrix as the return value.
 
 cacheSolve <- function(cachedMatrix) {
   invertedMatrix <- cachedMatrix$getInvertedMatrix()
